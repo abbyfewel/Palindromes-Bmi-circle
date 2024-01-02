@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  float lbs;
+  float inches;
+  cout << "Enter your weight in pounds: "; cin >> lbs;
+  cout << "\nEnter your height in inches: "; cin >> inches;
+  float kgs = (lbs * 0.45359);
+  float meters = (inches * 0.0254);
+  float bmi = kgs/(meters*meters);
+  cout << "\nYour BMI is " << bmi;
+}
