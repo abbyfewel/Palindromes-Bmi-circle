@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  float radius; // float for decimals
+  float height;
+  cout << "Enter the cylinder's radius: ";
+  cin >> radius;
+  cout << "Enter the cylinder's height: ";
+  cin >> height;
+  float pi = 3.141592653; // digits of pi to use
+  float surfarea = (2*(pi)*((radius*radius)))+(2*pi*radius*height); // surf area
+  cout << "Cylinder's surface area is " << surfarea;
+}
