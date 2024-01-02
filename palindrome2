@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int num; // user input
+  int digit = 0; // digit to check while using modulus
+  int rev = 0; // reverse of original number to check for palindrome
+  cout << "Enter a one to six digit number: ";
+  cin >> num;
+  if (0 > num || num > 999999) { // checking digits
+    cout << "\nInvalid number of digits. Please start again and enter a valid number."; 
+    num = -1;
+  }
+  int number = num; // int to use to check after manipulating num
+  while(num>0){
+        digit = num % 10;  // last digit in number
+        rev = (rev * 10) + digit; // 0 + last digit in num
+        num = num / 10; // num shortens by a digit
+    }
+  if (number == rev) { // checking for palindrome
+    cout << "\n" << number << " is a palindrome.";
+  } else if (rev > 0) {
+    cout << "\n" << number << " is not a palindrome.";
+  }
+}
